@@ -1,0 +1,41 @@
+package com.spring.springapi.exception.controllerException;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ControllerException {
+
+
+    private static final long serialVersionID = 1L ;
+    private String errorCode;
+    private String errorMessage;
+
+    public static long getSerialVersionID() {
+        return serialVersionID;
+    }
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public ControllerException(String errorCode, String errorMessage) {
+        super();
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+    }
+
+    public ControllerException() {
+    }
+}
